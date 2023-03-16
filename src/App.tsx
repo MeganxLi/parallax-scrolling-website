@@ -5,9 +5,9 @@ import { styled } from '@linaria/react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
-const Card = styled.div`
+const Card = styled.div<CardProps>`
 padding: 2em;
-color: red;
+color: ${(props) => props.color};
 `
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +23,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <Card>
+      <Card color="blue">
         <button type="button" onClick={() => setCount((prev) => prev + 1)}>
           count is
           {count}
