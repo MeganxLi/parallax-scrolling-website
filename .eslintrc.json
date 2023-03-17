@@ -88,8 +88,9 @@
   "overrides": [
     {
       "files": [
-        "tailwind.config.js"
-      ]
+        "vite.config.ts"
+      ],
+      "ignore": true // 忽略該檔案
     }
   ]
 }
