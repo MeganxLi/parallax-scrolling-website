@@ -13,5 +13,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/parallax-scrolling-website/'
+  base: 'https://MeganxLi.github.io/parallax-scrolling-website/'
 })
