@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react'
 import { styled } from '@linaria/react'
 import { gsap } from "gsap"
 
-import './App.css'
 
 const Card = styled.div<CardProps>`
   padding: 2em;
@@ -37,22 +36,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Vite + React</h1>
       <Box ref={app}>selector</Box>
       <Card color="blue">
         <button type="button" onClick={() => setCount((prev) => prev + 1)}>
           count is
           {count}
         </button>
-        <p>
-          Edit
-          <code>src/App.tsx</code>
-          and save to test HMR
-        </p>
       </Card>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }
