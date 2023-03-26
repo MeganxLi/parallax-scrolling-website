@@ -3,7 +3,7 @@ import { styled } from '@linaria/react'
 import colors from '../util/Variables'
 
 export const LoadingPage = styled.div`
-  background-color: ${String(colors.orange[1])};
+  background-color: ${colors.orange[1]};
   width: 100vw;
   height: 100vh;
 `
@@ -21,12 +21,15 @@ export const ProgressBar = styled.div`
   width: 100%;
   height: 1.5rem;
   border-radius: 20px;
-  background-color: ${String(colors.white)};
+  background-color: ${colors.white};
 `
 
-export const Bar = styled.div`  
-  background-color: ${String(colors.green[1])};
-`
+export const Bar = styled.div<BarProps>`  
+  background-color: ${colors.green[1]};
+  height: 100%;
+  width: ${(props) => props.width}%;
+  border-radius: 20px;
+ `
 
 export const BarText = styled.p`
   font-family: 'Georama';
