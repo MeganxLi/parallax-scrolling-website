@@ -63,7 +63,7 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-no-useless-fragment": "off",
     "no-console": [
-      "error",
+      "warn",
       {
         "allow": [
           "warn",
@@ -78,6 +78,10 @@
     "react/require-default-props": "off",
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/space-before-blocks": "off",
+    "quote-props": [
+      "error",
+      "as-needed"
+    ],
     //無障礙
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-static-element-interactions": "off",
