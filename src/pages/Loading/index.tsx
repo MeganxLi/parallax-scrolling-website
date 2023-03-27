@@ -1,32 +1,39 @@
 import { useEffect, useState } from 'react'
 
 import {
-  LoadingBlack, LoadingPage, ProgressBar, Bar, BarText,
+  LoadingBlack, LoadingPage, ProgressBar, Bar, BarText, LoadingImg,
 } from '../../styled/pages/Loading'
 
-const Loading = () => {
+interface Props {
+  switchPage: (finish: boolean) => void;
+}
+
+const Loading = ({ switchPage }: Props) => {
   const [loadingTime, setLoadingTime] = useState<number>(0)
+  const finish = loadingTime !== 100
 
   useEffect(() => {
-    const handleLoad = () => {
-      const time = new Date().getTime() - window.performance.timing.navigationStart
-      setLoadingTime(time)
+    const intervalId = setInterval(() => {
+      setLoadingTime((prevProgress) => prevProgress + 70)
+    }, 300)
+
+    if (loadingTime >= 100) {
+      setLoadingTime(100)
+      switchPage(true)
+      clearInterval(intervalId)
     }
 
-    window.addEventListener('load', handleLoad)
-
-    return () => window.removeEventListener('load', handleLoad)
-  }, [])
+    return () => clearInterval(intervalId)
+  }, [loadingTime])
 
   return (
     <LoadingPage>
       <LoadingBlack>
-        <img src="./images/Caterpillar.png" alt="loading img" />
-        {loadingTime}
+        <LoadingImg src={`./images/${finish ? 'Caterpillar' : 'Butterfly'}.png`} alt="loading img" move={loadingTime} />
         <ProgressBar>
-          <Bar />
+          <Bar move={loadingTime} />
         </ProgressBar>
-        <BarText>Complete</BarText>
+        <BarText>{finish ? 'loading...' : 'complete'}</BarText>
       </LoadingBlack>
     </LoadingPage>
   )
