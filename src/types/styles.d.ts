@@ -1,3 +1,3 @@
-interface CardProps {
-  color: string;
+interface LoadingProps {
+  move: number;
 }
