@@ -37,6 +37,7 @@ export const Nav = styled.nav`
     font-family: 'GenSenRounded-M';
     padding: 10px;
     border-radius: 3px;
+    color: ${colors.green[1]};
     cursor: pointer;
 
     &:last-child{
