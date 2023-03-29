@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "GenSenRounded-H";
+  src: url("./fonts/GenSenRounded-H.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GenSenRounded-M";
+  src: url("./fonts/GenSenRounded-M.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Gill Sans", sans-serif;
+  background: #f1ede9;
+}
