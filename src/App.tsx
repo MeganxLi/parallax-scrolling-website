@@ -1,9 +1,19 @@
+import { useState } from 'react'
+
+import Home from './pages/Home'
 import Loading from './pages/Loading'
 
-function App() {
+const App = () => {
+  const [page, setPage] = useState<Boolean>(false)
   return (
     <div className="App">
-      <Loading />
+      {
+        page
+          ? <Home />
+          : <Loading switchPage={(finish) => setPage(finish)} />
+
+      }
+
     </div>
   )
 }
