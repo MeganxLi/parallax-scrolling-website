@@ -3,6 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import App from './App'
+import "animate.css/animate.css";
 import './styles/reset.css'
 import './styles/base.css'
 
