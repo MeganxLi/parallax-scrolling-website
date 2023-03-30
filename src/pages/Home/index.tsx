@@ -1,7 +1,11 @@
 import Head from '../../components/Head'
+import Banner from './Banner'
 
 const index = () => (
-  <Head />
+  <>
+    <Head />
+    <Banner />
+  </>
 )
 
 export default index
