@@ -156,6 +156,7 @@ export const SignUpButton = styled.button`
   display: flex;
   align-items: center;
   gap: 4px;
+  width: max-content;
 
   &:hover{
     ${hoverSignUpButton}
@@ -163,5 +164,70 @@ export const SignUpButton = styled.button`
 
   ${rwd('md')} { 
     ${hoverSignUpButton}
+  }
+`
+
+export const RectangleTop = styled.img`
+  position: absolute;
+  left: 10%;
+  right: 48.1%;
+  top: 3%;
+  width: 220px;
+  ${rwd('md')} { 
+    display: none;
+  }
+`
+
+export const RectangleRight = styled.img`
+  position: absolute;
+  right: -10%;
+  bottom: 40%;
+  width: 220px;
+  ${rwd('md')} { 
+    bottom: -5%;
+  }
+`
+
+export const StarLeft = styled.img`
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  transform: rotate(325deg);
+  z-index: -1;
+  
+  ${rwd('md')} { 
+    left: -15%;
+    top: auto;
+    bottom: 20%;
+  }
+`
+
+export const StarRight = styled.div`
+  position: absolute;
+  right: 20%;
+  top: 10%;
+  z-index: -1;
+
+  span {
+    font-family: 'Georama';
+    font-weight: 800;
+    font-size: 52px;
+    font-style: italic;
+    line-height: 62px;
+    letter-spacing: 0.15em;
+    color: ${colors.black.core};
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    white-space: nowrap;
+    ${rwd('lg')} { 
+      display: none;
+    }
+  }
+
+  ${rwd('md')} { 
+    transform: rotate(325deg);
+    right: -10%;
+    top: 50%;
   }
 `
