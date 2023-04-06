@@ -1,4 +1,4 @@
-import { BannerBlock, BannerTittle, SignUpButton, RectangleTop, RectangleRight, StarLeft, StarRight } from '../../styled/pages/Home'
+import { BannerBlock, BannerTittle, SignUpButton, RectangleTop, RectangleRight, StarLeft, StarRight, FrontEnd, HouseImg, FlyImg } from '../../styled/pages/Home'
 import { ReactComponent as RightArrowIcon } from "../../assets/svg/right_arrow.svg"
 
 const Banner = () => {
@@ -18,7 +18,9 @@ const Banner = () => {
         <img src='./images/Star.png' />
         <span>WEB DESIGN</span>
       </StarRight>
-
+      <FrontEnd>FRONT END</FrontEnd>
+      <HouseImg />
+      <FlyImg />
     </BannerBlock>
   )
 }

@@ -56,6 +56,7 @@ export const BannerTittle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 3;
 
   &::after{
     content: ""; 
@@ -134,7 +135,7 @@ export const BannerTittle = styled.div`
   }
 `
 const hoverSignUpButton = `
-  box-shadow: 6px 6px 0px ${colors.black.core};  
+  box-shadow: 6px 6px 0px ${colors.black.core}; 
 `
 
 
@@ -157,6 +158,7 @@ export const SignUpButton = styled.button`
   align-items: center;
   gap: 4px;
   width: max-content;
+  z-index: 5;
 
   &:hover{
     ${hoverSignUpButton}
@@ -164,6 +166,7 @@ export const SignUpButton = styled.button`
 
   ${rwd('md')} { 
     ${hoverSignUpButton}
+    bottom: 10%;
   }
 `
 
@@ -173,6 +176,7 @@ export const RectangleTop = styled.img`
   right: 48.1%;
   top: 3%;
   width: 220px;
+
   ${rwd('md')} { 
     display: none;
   }
@@ -183,6 +187,7 @@ export const RectangleRight = styled.img`
   right: -10%;
   bottom: 40%;
   width: 220px;
+
   ${rwd('md')} { 
     bottom: -5%;
   }
@@ -196,7 +201,7 @@ export const StarLeft = styled.img`
   z-index: -1;
   
   ${rwd('md')} { 
-    left: -15%;
+    left: -100px;
     top: auto;
     bottom: 20%;
   }
@@ -220,6 +225,7 @@ export const StarRight = styled.div`
     left: 35%;
     top: 10%;
     white-space: nowrap;
+
     ${rwd('lg')} { 
       display: none;
     }
@@ -227,7 +233,66 @@ export const StarRight = styled.div`
 
   ${rwd('md')} { 
     transform: rotate(325deg);
-    right: -10%;
+    right: -100px;
     top: 50%;
+  }
+`
+
+export const FrontEnd = styled.p`
+  font-family: 'Georama';
+  font-style: italic;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 62px;
+  color: ${colors.black.core};
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+
+  ${rwd('md')} { 
+    display: none;
+  }
+`
+
+export const HouseImg = styled.div`
+  position: absolute; 
+  top: 50%;
+  left: 20%;
+  background-image: url("./images/House.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 285px;
+
+  &:hover {
+    background-image: url("./images/HouseHover.png");
+  }
+
+  ${rwd('lg')} { 
+    background-image: url("./images/HouseHover.png");
+    width: 190px;
+    height: 160px;
+  }
+`
+
+export const FlyImg = styled.div`
+  position: absolute; 
+  top: 50%;
+  right: 10%;
+  background-image: url("./images/Fly.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 275px;
+  height: 220px;
+
+  &:hover {
+    background-image: url("./images/FlyHover.png");
+  }
+
+  ${rwd('lg')} { 
+    background-image: url("./images/FlyHover.png");
+    top: 70%;
+    width: 200px;
+    height: 113px;
   }
 `
