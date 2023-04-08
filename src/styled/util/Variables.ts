@@ -1,4 +1,4 @@
-const colors: Colors = {
+const colors = {
   green: {
     1: '#4E7B57',
     2: '#69A575',
