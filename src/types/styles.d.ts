@@ -12,4 +12,5 @@ interface HeaderProps {
 interface CarouselProps {
   color: string
   boxColor: string
+  order: number
 }
