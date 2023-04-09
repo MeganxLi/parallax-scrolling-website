@@ -5,5 +5,7 @@ type MenuType = {
 
 type CarouselListType = {
   color: string,
+  boxColor: string,
   text: string
+  rwd: number
 }
