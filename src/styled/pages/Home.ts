@@ -302,6 +302,7 @@ export const FlyImg = styled.div`
 export const QuestionBlock = styled.div`
   position: relative;
   height: 100vh;
+  overflow: hidden;
 
   &::after, &::before{
     content: "";
@@ -323,7 +324,7 @@ export const QuestionCarousel = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: auto 1fr;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 100px;
 
@@ -380,12 +381,14 @@ export const QuestionCarouselItem = styled.div<CarouselProps>`
   color: ${colors.white};
   padding: 24px;
   box-shadow: 15px 15px 0px 1px ${({ boxColor }) => boxColor};
+  /* transform: translate(0%, -110vh); */
+/* 
   transform: translate(0%, ${({ order }) =>
     order === 1 ?
       '-20vh' :
       order === 2 ?
         '-10vh' :
-        '0'});
+        '0'}); */
 
   ${rwd('xl')} {
     font-size: 30px;
