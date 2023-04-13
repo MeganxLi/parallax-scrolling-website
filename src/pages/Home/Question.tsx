@@ -1,6 +1,6 @@
 import CarouselList from "../../constants/QuestionCarousel"
 import { QuestionBlock, QuestionCarousel, QuestionCarouselIndicators, QuestionCarouselItem, QuestionMark } from "../../styled/pages/Home"
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -17,30 +17,33 @@ const Question = () => {
     const srollTL = gsap.timeline({
       scrollTrigger: {
         trigger: questionBlockRef.current,
-
-        start: "top center", // 從questionBlockRef 的中央開始觸發
-        end: "+=100%", // 觸發點為畫面中央
+        start: 'top top',
+        end: 'bottom top+=100',
         toggleClass: "active",
+        pin: true,
+        // pinSpacing: true,
         scrub: true,
         markers: true,
+
       },
     });
 
-    srollTL.to(carouseItemRef.current[0], {
-      autoAlpha: 1,
-      y: '20vh',
-      duration: 1, //動畫執行的時間長度
-    });
-    srollTL.to(carouseItemRef.current[1], {
-      autoAlpha: 1,
-      y: '0%',
-      duration: 1,
-    });
-    srollTL.to(carouseItemRef.current[2], {
-      autoAlpha: 1,
-      y: '-20vh',
-      duration: 1,
-    });
+    srollTL
+      .to(questionBlockRef.current, {
+        y: '0',
+      }, "<")
+      .to(carouseItemRef.current[1], {
+        autoAlpha: 1,
+        y: '0%',
+      }, ">+=2")
+      .to(carouseItemRef.current[0], {
+        autoAlpha: 1,
+        y: '20vh',
+      }, ">+=2")
+      .to(carouseItemRef.current[2], {
+        autoAlpha: 1,
+        y: '-20vh',
+      }, ">+=2");
   }, [])
 
   return (
