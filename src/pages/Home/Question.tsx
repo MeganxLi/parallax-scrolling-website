@@ -1,6 +1,6 @@
 import CarouselList from "../../constants/QuestionCarousel"
 import { QuestionBlock, QuestionCarousel, QuestionCarouselIndicators, QuestionCarouselItem, QuestionMark } from "../../styled/pages/Home"
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,6 +14,23 @@ const Question = () => {
     // 預設隱藏所有 carouseItem
     gsap.set(carouseItemRef.current, { autoAlpha: 0, y: '100%' });
 
+    // gsap.from(".question-carousel-item", {
+    //   scrollTrigger: {
+    //     trigger: "question-block",
+    //     pin: true,
+    //     markers: true,
+    //     scrub: 2,
+    //     start: "center center",
+    //     end: "+=900 center"
+    //   },
+    //   opacity: 0,
+    //   y: -100,
+    //   ease: "back.out(4)",
+    //   stagger: {
+    //     amount: 2,
+    //     from: "random"
+    //   }
+    // })
     const srollTL = gsap.timeline({
       scrollTrigger: {
         trigger: questionBlockRef.current,
@@ -22,7 +39,7 @@ const Question = () => {
         toggleClass: "active",
         pin: true,
         // pinSpacing: true,
-        scrub: true,
+        scrub: 2,
         markers: true,
 
       },
@@ -47,7 +64,7 @@ const Question = () => {
   }, [])
 
   return (
-    <QuestionBlock ref={questionBlockRef}>
+    <QuestionBlock className="question-block" ref={questionBlockRef}>
       <QuestionCarousel>
         <QuestionCarouselIndicators>
           {CarouselList.map((item: CarouselListType) => {
@@ -57,6 +74,7 @@ const Question = () => {
 
         {CarouselList.map((item: CarouselListType) => {
           return <QuestionCarouselItem
+            className="question-carousel-item"
             ref={(el) => (carouseItemRef.current = [...carouseItemRef.current, el])}
             key={item.text}
             color={item.color}
