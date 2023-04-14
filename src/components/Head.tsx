@@ -1,8 +1,11 @@
+import { useRef, useState } from 'react'
+
+import { ReactComponent as MenuIcon } from '../assets/svg/menu.svg'
+import { ReactComponent as CloseIcon } from '../assets/svg/x.svg'
 import Menu from '../constants/Menu'
-import { Header, HeaderTitle, HeaderNav, MenuButton, MenuBox } from '../styled/components/Head'
-import { ReactComponent as MenuIcon } from "../assets/svg/menu.svg";
-import { ReactComponent as CloseIcon } from "../assets/svg/x.svg";
-import { useRef, useState } from 'react';
+import {
+  Header, HeaderTitle, HeaderNav, MenuButton, MenuBox,
+} from '../styled/components/Head'
 
 const Head = () => {
   const menuRef = useRef<HTMLElement>(null)
@@ -14,14 +17,13 @@ const Head = () => {
     setIsActive(!isActive)
 
     if (menuRef.current.classList.contains('animate__fadeOutUp')) {
-      menuRef.current.classList.add('animate__fadeInDown');
-      menuRef.current.classList.remove('animate__fadeOutUp');
-
+      menuRef.current.classList.add('animate__fadeInDown')
+      menuRef.current.classList.remove('animate__fadeOutUp')
     } else if (menuRef.current.classList.contains('animate__fadeInDown')) {
-      menuRef.current.classList.remove('animate__fadeInDown');
-      menuRef.current.classList.add('animate__fadeOutUp');
+      menuRef.current.classList.remove('animate__fadeInDown')
+      menuRef.current.classList.add('animate__fadeOutUp')
     } else {
-      menuRef.current.classList.add('animate__fadeInDown');
+      menuRef.current.classList.add('animate__fadeInDown')
     }
   }
 
@@ -36,9 +38,9 @@ const Head = () => {
         </HeaderNav>
         <MenuButton onClick={clickMenuButton}>
           {
-            isActive ?
-              <CloseIcon /> :
-              <MenuIcon />
+            isActive
+              ? <CloseIcon />
+              : <MenuIcon />
           }
         </MenuButton>
       </Header>

@@ -10,7 +10,7 @@ export const BannerBlock = styled.div`
 
   &::after{
     content: ""; 
-	  position: absolute; 
+    position: absolute; 
     z-index: -1;
     bottom: 0;
     left: 0;
@@ -61,10 +61,10 @@ export const BannerTittle = styled.div`
 
   &::after{
     content: ""; 
-	  position: absolute; 
+    position: absolute; 
     z-index: -1;
     top: 130px;
-	  left: 5px;
+    left: 5px;
     background-image: url("./images/HomeTitleBg.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -138,7 +138,6 @@ export const BannerTittle = styled.div`
 const hoverSignUpButton = `
   box-shadow: 6px 6px 0px ${colors.black.core}; 
 `
-
 
 export const SignUpButton = styled.button`
   font-family: 'GenSenRounded-M';
@@ -298,7 +297,6 @@ export const FlyImg = styled.div`
   }
 `
 
-
 export const QuestionBlock = styled.div`
   position: relative;
   height: 100vh;
@@ -381,14 +379,6 @@ export const QuestionCarouselItem = styled.div<CarouselProps>`
   color: ${colors.white};
   padding: 24px;
   box-shadow: 15px 15px 0px 1px ${({ boxColor }) => boxColor};
-  /* transform: translate(0%, -110vh); */
-/* 
-  transform: translate(0%, ${({ order }) =>
-    order === 1 ?
-      '-20vh' :
-      order === 2 ?
-        '-10vh' :
-        '0'}); */
 
   ${rwd('xl')} {
     font-size: 30px;

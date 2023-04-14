@@ -1,18 +1,22 @@
-import CarouselList from "../../constants/QuestionCarousel"
-import { QuestionBlock, QuestionCarousel, QuestionCarouselIndicators, QuestionCarouselItem, QuestionMark } from "../../styled/pages/Home"
 import { useEffect, useRef } from 'react'
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+import CarouselList from '../../constants/QuestionCarousel'
+import {
+  QuestionBlock, QuestionCarousel, QuestionCarouselIndicators, QuestionCarouselItem, QuestionMark,
+} from '../../styled/pages/Home'
 
 const Question = () => {
   const questionBlockRef = useRef<HTMLDivElement>(null)
   const carouseItemRef = useRef<(HTMLDivElement | null)[]>([])
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
     // 預設隱藏所有 carouseItem
-    gsap.set(carouseItemRef.current, { autoAlpha: 0, y: '100%' });
+    gsap.set(carouseItemRef.current, { autoAlpha: 0, y: '100%' })
 
     // gsap.from(".question-carousel-item", {
     //   scrollTrigger: {
@@ -36,56 +40,59 @@ const Question = () => {
         trigger: questionBlockRef.current,
         start: 'top top',
         end: 'bottom top+=100',
-        toggleClass: "active",
+        toggleClass: 'active',
         pin: true,
         // pinSpacing: true,
         scrub: 2,
         markers: true,
 
       },
-    });
+    })
 
     srollTL
       .to(questionBlockRef.current, {
         y: '0',
-      }, "<")
+      }, '<')
       .to(carouseItemRef.current[1], {
         autoAlpha: 1,
         y: '0%',
-      }, ">+=2")
+      }, '>+=2')
       .to(carouseItemRef.current[0], {
         autoAlpha: 1,
         y: '20vh',
-      }, ">+=2")
+      }, '>+=2')
       .to(carouseItemRef.current[2], {
         autoAlpha: 1,
         y: '-20vh',
-      }, ">+=2");
+      }, '>+=2')
   }, [])
+
+  const handleCarouseItemRef = (el: HTMLDivElement | null) => {
+    carouseItemRef.current = [...carouseItemRef.current, el]
+  }
 
   return (
     <QuestionBlock className="question-block" ref={questionBlockRef}>
       <QuestionCarousel>
         <QuestionCarouselIndicators>
-          {CarouselList.map((item: CarouselListType) => {
-            return <button key={item.text} />
-          })}
+          {CarouselList.map((item: CarouselListType) => <button key={item.text} type="button" />)}
         </QuestionCarouselIndicators>
 
-        {CarouselList.map((item: CarouselListType) => {
-          return <QuestionCarouselItem
+        {CarouselList.map((item: CarouselListType) => (
+          <QuestionCarouselItem
             className="question-carousel-item"
-            ref={(el) => (carouseItemRef.current = [...carouseItemRef.current, el])}
+            ref={handleCarouseItemRef}
             key={item.text}
             color={item.color}
             boxColor={item.boxColor}
-            order={item.rwd}>
+            order={item.rwd}
+          >
             {item.text}
           </QuestionCarouselItem>
-        })}
+        ))}
 
       </QuestionCarousel>
-      <QuestionMark src='./images/QuestionMark.png' />
+      <QuestionMark src="./images/QuestionMark.png" />
     </QuestionBlock>
   )
 }
