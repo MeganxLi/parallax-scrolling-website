@@ -7,26 +7,6 @@ export const BannerBlock = styled.div`
   position: relative;
   height: 100vh;
   overflow: hidden;
-
-  &::after{
-    content: ""; 
-    position: absolute; 
-    z-index: -1;
-    bottom: 0;
-    left: 0;
-    background-image: url("./images/THEF2E.png");
-    background-size: contain;
-    background-repeat: space no-repeat;
-    background-size: 205px auto;
-    height: 50px;
-    width: 100%;
-  }
-
-  ${rwd('md')} { 
-    &::after{
-      background-image: none;
-    }
-  }
 `
 
 const hoverBannerTittle = `
@@ -405,4 +385,19 @@ export const QuestionMark = styled.img`
     left: 50%;
     transform: translate(-50%, 0%);
   }
+`
+export const LoopText = styled.span`
+  font-family: 'GenSenRounded-H';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 900;
+  font-size: 80px;
+  white-space: nowrap;
+  color: ${colors.white};
+
+  ${rwd('md')} { 
+    display: none;
+  } 
 `
