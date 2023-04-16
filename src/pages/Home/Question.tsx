@@ -46,24 +46,24 @@ const Question = () => {
       .to(carouseItemRef.current[1], {
         autoAlpha: 1,
         y: '0%',
+        onStart: () => {
+          IndicatorsItemRef.current[0]?.classList.add('active')
+        },
       }, '>+=2')
-      .add(() => {
-        IndicatorsItemRef.current[0]?.classList.add('active')
-      }, '<+=2') // 在滾動觸發時刻添加 active 類別
       .to(carouseItemRef.current[0], {
         autoAlpha: 1,
         y: '20vh',
+        onStart: () => {
+          IndicatorsItemRef.current[1]?.classList.add('active')
+        },
       }, '>+=2')
-      .add(() => {
-        IndicatorsItemRef.current[1]?.classList.add('active')
-      }, '<+=2')
       .to(carouseItemRef.current[2], {
         autoAlpha: 1,
         y: '-20vh',
+        onStart: () => {
+          IndicatorsItemRef.current[2]?.classList.add('active')
+        },
       }, '>+=2')
-      .add(() => {
-        IndicatorsItemRef.current[2]?.classList.add('active')
-      }, '<+=2')
   }, [])
 
   const handleIndicatorsItemRef = (el: HTMLElement | null) => {
