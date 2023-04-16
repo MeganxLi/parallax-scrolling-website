@@ -323,7 +323,7 @@ export const QuestionCarouselIndicators = styled.div`
   grid-row-start: 1;
   grid-row-end: 1;
 
-  button{
+  span{
     width: 33px;
     height: 33px;
     border: none;
