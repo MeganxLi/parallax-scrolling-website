@@ -18,38 +18,27 @@ const Question = () => {
     // 預設隱藏所有 carouseItem
     gsap.set(carouseItemRef.current, { autoAlpha: 0, y: '100%' })
 
-    // gsap.from(".question-carousel-item", {
-    //   scrollTrigger: {
-    //     trigger: "question-block",
-    //     pin: true,
-    //     markers: true,
-    //     scrub: 2,
-    //     start: "center center",
-    //     end: "+=900 center"
-    //   },
-    //   opacity: 0,
-    //   y: -100,
-    //   ease: "back.out(4)",
-    //   stagger: {
-    //     amount: 2,
-    //     from: "random"
-    //   }
-    // })
-    const srollTL = gsap.timeline({
+    const scrollTL = gsap.timeline({
       scrollTrigger: {
         trigger: questionBlockRef.current,
         start: 'top top',
-        end: 'bottom top+=100',
+        end: 'bottom bottom',
         toggleClass: 'active',
         pin: true,
-        // pinSpacing: true,
+        pinSpacing: false,
         scrub: 2,
         markers: true,
-
+        onToggle: (self) => {
+          if (self.isActive) {
+            gsap.to(questionBlockRef.current, {
+              pinSpacing: false,
+            })
+          }
+        },
       },
     })
 
-    srollTL
+    scrollTL
       .to(questionBlockRef.current, {
         y: '0',
       }, '<')
