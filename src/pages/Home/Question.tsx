@@ -64,6 +64,10 @@ const Question = () => {
           IndicatorsItemRef.current[2]?.classList.add('active')
         },
       }, '>+=2')
+
+    return () => {
+      scrollTL.kill()
+    }
   }, [])
 
   const handleIndicatorsItemRef = (el: HTMLElement | null) => {
