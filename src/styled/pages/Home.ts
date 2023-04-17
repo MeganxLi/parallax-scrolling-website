@@ -3,6 +3,7 @@ import { styled } from '@linaria/react'
 import { rwd } from '../util/Mixins'
 import colors from '../util/Variables'
 
+/* -- Banner --*/
 export const BannerBlock = styled.div`
   position: relative;
   height: 100vh;
@@ -276,7 +277,7 @@ export const FlyImg = styled.div`
     height: 113px;
   }
 `
-
+/* -- Question --*/
 export const QuestionBlock = styled.div`
   position: relative;
   height: 100vh;
@@ -400,4 +401,49 @@ export const LoopText = styled.span`
   ${rwd('md')} { 
     display: none;
   } 
+`
+
+/* -- Start --*/
+export const StartBlock = styled.div`
+  position: relative;
+  background-color: ${colors.green[3]};
+  height: 2080px;
+`
+
+export const StartLoopText = styled.div`
+  font-family: 'GenSenRounded-H';
+  white-space: nowrap;
+  font-size: 80px;  
+  color: transparent;
+
+  &:last-child{
+    position: absolute;
+    bottom: 0;
+  }
+
+  span{
+    margin-right: 0.5rem;
+  }
+
+  p{
+    &:nth-child(odd){
+      span:nth-child(odd){
+        -webkit-text-stroke: 2px ${colors.white};
+      }
+
+      span:nth-child(even){
+        color: ${colors.white}; 
+      }
+    }
+
+    &:nth-child(even){
+      span:nth-child(odd){
+        color: ${colors.white}; 
+      }
+
+      span:nth-child(even){
+        -webkit-text-stroke: 2px ${colors.white};
+      }
+    }
+  }
 `
