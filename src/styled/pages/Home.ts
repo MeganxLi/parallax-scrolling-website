@@ -408,6 +408,7 @@ export const StartBlock = styled.div`
   position: relative;
   background-color: ${colors.green[3]};
   height: 2080px;
+  overflow: hidden;
 `
 
 export const StartLoopText = styled.div`
@@ -447,3 +448,50 @@ export const StartLoopText = styled.div`
     }
   }
 `
+
+export const CircleWhite = styled.div`
+  border-radius: 50%;
+  background-color: ${colors.orange[3]};
+  width: 1800px;
+  height: 1800px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 10.9rem;
+  left: 50%;
+  transform: translate(-50%);
+
+  img{    
+    position: absolute;
+    top: 45rem;
+    left: 11rem;
+  }
+`
+
+export const CircleTitle = styled.div`
+  position: relative;
+  margin-top: 19.5rem;
+  margin-bottom: 10rem;
+  width: 100%;
+
+  img, h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  h3{
+    font-family: 'GenSenRounded-H';
+    font-weight: 900;
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: ${colors.black[800]};    
+    width: 100%;
+  }
+`
+
+export const CircleMain = styled.div``
