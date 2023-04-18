@@ -1,5 +1,6 @@
 import Banner from './Banner'
 import Question from './Question'
+import Start from './Start'
 import Head from '../../components/Head'
 
 const index = () => (
@@ -7,6 +8,7 @@ const index = () => (
     <Head />
     <Banner />
     <Question />
+    <Start />
   </>
 )
 
