@@ -462,15 +462,9 @@ export const CircleWhite = styled.div`
   top: 10.9rem;
   left: 50%;
   transform: translate(-50%);
-
-  img{    
-    position: absolute;
-    top: 45rem;
-    left: 11rem;
-  }
 `
 
-export const CircleTitle = styled.div`
+export const CircleWhiteTitle = styled.div`
   position: relative;
   margin-top: 19.5rem;
   margin-bottom: 10rem;
@@ -494,4 +488,43 @@ export const CircleTitle = styled.div`
   }
 `
 
-export const CircleMain = styled.div``
+export const CircleWhiteMain = styled.div`
+  width: auto;
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  grid-template-columns: 40rem repeat(2,min-content);
+  grid-template-rows: repeat(2,1fr);
+  column-gap: 1rem;
+
+  .build-good{
+    grid-area: 2 / 1 / 4 / 4;
+  }
+`
+
+export const CircleMainItem1 = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  p {
+      font-family: 'Georama';
+      font-size: 40px;
+      letter-spacing: 0.15em;
+  }
+
+  .ui{
+    margin-left: 2rem;
+  }
+
+  .front-end{
+    margin-right: 2rem;
+  }
+  
+`
+
+export const GreenSnow = styled.img`    
+  position: absolute;
+  top: 45rem;
+  left: 11rem;
+`

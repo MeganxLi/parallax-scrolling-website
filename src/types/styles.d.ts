@@ -1,14 +1,19 @@
-/*--- Loading ---*/
+/* --- Component ---*/
+interface TagProps {
+  fontSize: number
+}
+
+/* --- Loading ---*/
 interface LoadingProps {
   move: number;
 }
 
-/*--- Header ---*/
+/* --- Header ---*/
 interface HeaderProps {
   active: boolean
 }
 
-/*--- Home ---*/
+/* --- Home ---*/
 interface CarouselProps {
   color: string
   boxColor: string
