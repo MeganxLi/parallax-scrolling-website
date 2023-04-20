@@ -28,15 +28,15 @@ const Banner = () => {
         <h3>互動式網頁設計</h3>
         <p>前端 & UI 修煉精神時光屋</p>
       </BannerTittle>
-      <RectangleTop src="./images/Rectangle.png" />
+      <RectangleTop src="./images/rectangle.png" />
       <SignUpButton>
         點擊立刻報名
         <RightArrowIcon />
       </SignUpButton>
-      <RectangleRight src="./images/Rectangle.png" />
-      <StarLeft src="./images/Star.png" />
+      <RectangleRight src="./images/rectangle.png" />
+      <StarLeft src="./images/star.png" />
       <StarRight>
-        <img src="./images/Star.png" alt="Star" />
+        <img src="./images/star.png" alt="Star" />
         <span>WEB DESIGN</span>
       </StarRight>
       <FrontEnd>FRONT END</FrontEnd>

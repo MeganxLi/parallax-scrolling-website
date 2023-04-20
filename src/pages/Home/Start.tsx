@@ -1,4 +1,6 @@
-import { useRef } from 'react'
+import { useEffect } from 'react'
+
+import { gsap } from 'gsap'
 
 import Tag from '../../components/Tag'
 import {
@@ -7,11 +9,18 @@ import {
 } from '../../styled/pages/Home'
 
 const Start = () => {
-  const LoopTextRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    gsap.to('.loop-text', {
+      xPercent: '-50',
+      ease: 'none',
+      duration: 8,
+      repeat: -1,
+    })
+  }, [])
 
   return (
     <StartBlock>
-      <StartLoopText ref={LoopTextRef}>
+      <StartLoopText className="loop-text">
         {[...Array(3)].map((_, idx: number) => (
           <p key={idx}>
             {[...Array(8)].map((__, i: number) => (
@@ -22,7 +31,7 @@ const Start = () => {
       </StartLoopText>
       <CircleWhite>
         <CircleWhiteTitle>
-          <img src="./images/StartTitleIllu.png" alt="start title background" />
+          <img src="./images/start-title-illu.png" alt="start title background" />
           <h3>互動式網頁設計</h3>
         </CircleWhiteTitle>
         <CircleWhiteMain>
@@ -36,10 +45,10 @@ const Start = () => {
           <img src="./images/figma.png" alt="Figma logo" />
           <Tag initText="Build Good Products Together" fontSize={48} className="build-good" />
         </CircleWhiteMain>
-        <GreenSnow src="./images/GreenSnow.png" alt="green snow" />
+        <GreenSnow src="./images/green-snow.png" alt="green snow" />
       </CircleWhite>
 
-      <StartLoopText ref={LoopTextRef}>
+      <StartLoopText className="loop-text">
         {[...Array(3)].map((_, idx: number) => (
           <p key={idx}>
             {[...Array(8)].map((__, i: number) => (
