@@ -6,7 +6,7 @@ import { ReactComponent as RightArrowIcon } from '../../assets/svg/right_arrow.s
 import {
   BannerBlock, BannerTittle, SignUpButton, RectangleTop, RectangleRight,
   StarLeft, StarRight, FrontEnd, HouseImg, FlyImg, LoopText,
-} from '../../styled/pages/Home'
+} from '../../styled/pages/Home/Banner'
 
 const Banner = () => {
   const LoopTextRef = useRef<HTMLSpanElement>(null)

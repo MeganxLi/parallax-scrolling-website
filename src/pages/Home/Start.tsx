@@ -6,7 +6,7 @@ import Tag from '../../components/Tag'
 import {
   CircleWhiteMain,
   CircleWhiteTitle, CircleWhite, StartBlock, StartLoopText, GreenSnow, CircleMainItem1,
-} from '../../styled/pages/Home'
+} from '../../styled/pages/Home/Start'
 
 const Start = () => {
   useEffect(() => {

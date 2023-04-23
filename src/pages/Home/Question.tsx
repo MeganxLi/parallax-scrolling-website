@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CarouselList from '../../constants/QuestionCarousel'
 import {
   QuestionBlock, QuestionCarousel, QuestionCarouselIndicators, QuestionCarouselItem, QuestionMark,
-} from '../../styled/pages/Home'
+} from '../../styled/pages/Home/Question'
 
 const Question = () => {
   const questionBlockRef = useRef<HTMLDivElement>(null)
