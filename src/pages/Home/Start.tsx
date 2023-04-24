@@ -4,13 +4,14 @@ import { gsap } from 'gsap'
 
 import Tag from '../../components/Tag'
 import {
-  CircleWhiteMain,
-  CircleWhiteTitle, CircleWhite, StartBlock, StartLoopText, GreenSnow, CircleMainItem1,
+  CircleMainTitle, CircleMain, CircleMainBox, StartBlock,
+  StartLoopText, GreenSnow, CircleMainItem1, CircleSub,
+  SubBoxTitle, SubBoxTitleBg, SubBoxText, SubBox, SubBoxStarImg, SubBoxSnowImg,
 } from '../../styled/pages/Home/Start'
 
 const Start = () => {
   useEffect(() => {
-    gsap.to('.loop-text', {
+    gsap.to('.start-loop-text', {
       xPercent: '-50',
       ease: 'none',
       duration: 8,
@@ -20,7 +21,7 @@ const Start = () => {
 
   return (
     <StartBlock>
-      <StartLoopText className="loop-text">
+      <StartLoopText className="start-loop-text">
         {[...Array(3)].map((_, idx: number) => (
           <p key={idx}>
             {[...Array(8)].map((__, i: number) => (
@@ -29,26 +30,36 @@ const Start = () => {
           </p>
         ))}
       </StartLoopText>
-      <CircleWhite>
-        <CircleWhiteTitle>
+      <CircleMain>
+        <CircleMainTitle>
           <img src="./images/start-title-illu.png" alt="start title background" />
           <h3>互動式網頁設計</h3>
-        </CircleWhiteTitle>
-        <CircleWhiteMain>
+        </CircleMainTitle>
+        <CircleMainBox>
           <CircleMainItem1>
             <p>{'<hello-world />'}</p>
-            <Tag initText="UI設計師" fontSize={40} className="ui" />
-            <Tag initText="前端工程師" fontSize={40} className="front-end" />
+            <Tag initText="UI設計師" fontSize={40} className="circle-main-title-ui" />
+            <Tag initText="前端工程師" fontSize={40} className="circle-main-title-front-end" />
             <img src="./images/line-box.png" alt="line box" />
           </CircleMainItem1>
           <img src="./images/solution-three-circle.png" alt="solution three circle" />
           <img src="./images/figma.png" alt="Figma logo" />
-          <Tag initText="Build Good Products Together" fontSize={48} className="build-good" />
-        </CircleWhiteMain>
+          <Tag initText="Build Good Products Together" fontSize={48} className="circle-main-tag-build-good" />
+        </CircleMainBox>
         <GreenSnow src="./images/green-snow.png" alt="green snow" />
-      </CircleWhite>
+      </CircleMain>
+      <CircleSub>
+        <SubBox>
+          <SubBoxStarImg src="./images/star.png" alt="star" />
+          <SubBoxTitle>年度最強合作</SubBoxTitle>
+          <SubBoxTitleBg>三大主題來襲</SubBoxTitleBg>
+          <SubBoxText>各路廠商強強聯手！</SubBoxText>
+          <SubBoxText>共同設計出接地氣的網頁互動挑戰關卡</SubBoxText>
+          <SubBoxSnowImg src="./images/green-snow.png" alt="green-snow" />
+        </SubBox>
+      </CircleSub>
 
-      <StartLoopText className="loop-text">
+      <StartLoopText className="start-loop-text">
         {[...Array(3)].map((_, idx: number) => (
           <p key={idx}>
             {[...Array(8)].map((__, i: number) => (

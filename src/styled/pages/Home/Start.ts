@@ -47,23 +47,26 @@ export const StartLoopText = styled.div`
   }
 `
 
-export const CircleWhite = styled.div`
+const CircleStyled = styled.div`
   border-radius: 50%;
-  background-color: ${colors.orange[3]};
-  width: 1800px;
-  height: 1800px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: 10.9rem;
   left: 50%;
   transform: translate(-50%);
+`
+
+export const CircleMain = styled(CircleStyled)`
+  background-color: ${colors.orange[3]};
+  top: 10.9rem;
+  width: 1800px;
+  height: 1800px;
   z-index: 3;
 `
 
-export const CircleWhiteTitle = styled.div`
+export const CircleMainTitle = styled.div`
   position: relative;
   margin-top: 19.5rem;
   margin-bottom: 10rem;
@@ -87,7 +90,7 @@ export const CircleWhiteTitle = styled.div`
   }
 `
 
-export const CircleWhiteMain = styled.div`
+export const CircleMainBox = styled.div`
   width: auto;
   display: grid;
   align-items: center;
@@ -96,7 +99,7 @@ export const CircleWhiteMain = styled.div`
   grid-template-rows: repeat(2,1fr);
   column-gap: 1rem;
 
-  .build-good{
+  .circle-main-tag-build-good{
     grid-area: 2 / 1 / 4 / 4;
   }
 `
@@ -112,11 +115,11 @@ export const CircleMainItem1 = styled.div`
       letter-spacing: 0.15em;
   }
 
-  .ui{
+  .circle-main-title-ui{
     margin-left: 2rem;
   }
 
-  .front-end{
+  .circle-main-title-front-end{
     margin-right: 2rem;
   }
   
@@ -126,4 +129,53 @@ export const GreenSnow = styled.img`
   position: absolute;
   top: 45rem;
   left: 11rem;
+`
+
+export const CircleSub = styled(CircleStyled)`
+  background-color: ${colors.orange[1]};
+  width: 1400px;
+  height: 1400px;
+  top: 70rem;
+  z-index: 4;
+`
+export const SubBox = styled.div`
+  display: grid;
+  justify-items: start;
+  margin-top: 15rem;
+  font-family: 'GenSenRounded-H';
+  position: relative;
+  gap: 1rem;
+`
+export const SubBoxTitle = styled.p`
+  font-weight: 900;
+  font-size: 80px;
+  letter-spacing: 0.15em;
+  color: ${colors.white};
+  padding: 10px;
+`
+
+export const SubBoxTitleBg = styled(SubBoxTitle)`
+  background-color: ${colors.black[800]};
+  margin-bottom: 2rem;
+`
+
+export const SubBoxText = styled.p` 
+  font-weight: 900;
+  font-size: 40px;
+  color: ${colors.white};
+`
+
+export const SubBoxStarImg = styled.img`
+  transform:rotate(325deg);
+  position: absolute;
+  top: -2.5rem;
+  left: -4.5rem;
+  z-index: -1;
+`
+
+export const SubBoxSnowImg = styled.img`
+  position: absolute;
+  bottom: -6.5rem;
+  right: -8.5rem;
+  z-index: -1;
 `
