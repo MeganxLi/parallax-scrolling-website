@@ -80,7 +80,7 @@
     "@typescript-eslint/space-before-blocks": "off",
     "quote-props": [
       "error",
-      "as-needed"
+      "consistent-as-needed"
     ],
     //無障礙
     "jsx-a11y/click-events-have-key-events": "off",
