@@ -37,14 +37,14 @@ const Start = () => {
         </CircleMainTitle>
         <CircleMainBox>
           <CircleMainItem1>
-            <p>{'<hello-world />'}</p>
-            <Tag initText="UI設計師" fontSize={40} className="circle-main-title-ui" />
-            <Tag initText="前端工程師" fontSize={40} className="circle-main-title-front-end" />
+            <p className="circle-main-title">{'<hello-world />'}</p>
+            <Tag initText="UI設計師" fontSize={40} className="circle-main-title-ui circle-main-title" />
+            <Tag initText="前端工程師" fontSize={40} className="circle-main-title-front-end circle-main-title" />
             <img src="./images/line-box.png" alt="line box" />
           </CircleMainItem1>
           <img src="./images/solution-three-circle.png" alt="solution three circle" />
           <img src="./images/figma.png" alt="Figma logo" />
-          <Tag initText="Build Good Products Together" fontSize={48} className="circle-main-tag-build-good" />
+          <Tag initText="Build Good Products Together" fontSize={48} className="circle-main-tag-build-good circle-main-title" />
         </CircleMainBox>
         <GreenSnow src="./images/green-snow.png" alt="green snow" />
       </CircleMain>
