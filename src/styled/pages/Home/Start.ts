@@ -96,9 +96,15 @@ export const CircleMain = styled(CircleStyled)`
 
 
   ${rwd('md')} { 
-    width: 95vw;
-    height: 95vw;
-    top: 10%;
+    width: 700px;
+    height: 700px;
+    top: 10rem;
+  }
+
+  ${rwd('xs')} { 
+    width: 360px;
+    height: 360px;
+    top: 7rem;
   }
 `
 
@@ -110,7 +116,7 @@ export const CircleMainTitle = styled.div`
 
   ${rwd('lg')} { 
     margin-top: 15%;
-    margin-bottom: 15%;;
+    margin-bottom: 11%;;
   }
 
 
@@ -149,19 +155,21 @@ export const CircleMainBox = styled.div`
   gap: 1.5rem;
 
   ${rwd('lg')} { 
-    width: 90vw;
-    grid-template-columns: 28rem 2fr 1fr;
+    grid-template-columns: 28rem repeat(2,min-content);
     gap: 2rem;
+  }
+
+  ${rwd('md')} {
+    grid-template-columns: 20rem 100px 50px;
+    gap: 0.5rem;
 
     img{
       width: 100%;
     }
   }
 
-  ${rwd('md')} {
-    width: 80vw;
-    grid-template-columns: 8fr 2fr 1fr;
-    gap: 0.5rem;
+  ${rwd('xs')} { 
+    grid-template-columns: 13.5rem 50px 30px;
   }
 
   .circle-main-tag-build-good{
@@ -173,7 +181,11 @@ export const CircleMainBox = styled.div`
       font-size: 28px;
     }
 
-    ${rwd('sm')} { 
+    ${rwd('md')} { 
+      font-size: 20px;
+    }
+
+    ${rwd('xs')} { 
       font-size: 12px;
       padding: 6px;
     }
@@ -221,7 +233,7 @@ export const GreenSnow = styled.img`
   ${rwd('md')} { 
     width: 52px;
     left: 8%;
-    top: 60%;
+    top: 50%;
   }
 `
 
@@ -237,13 +249,15 @@ export const CircleSub = styled(CircleStyled)`
   }
 
   ${rwd('md')} {
-    top: 42rem;
-    width: 80vw;
-    height: 80vw;
+    top: 33rem;
+    width: 600px;
+    height: 600px;
   }
 
   ${rwd('xs')} {
     top: 20rem;
+    width: 260px;
+    height: 260px;
   }
 `
 export const SubBox = styled.div`
@@ -253,6 +267,10 @@ export const SubBox = styled.div`
   font-family: 'GenSenRounded-H';
   position: relative;
   gap: 1rem;
+
+  ${rwd('lg')} { 
+    margin-top: 11rem;
+  }
 
   ${rwd('md')} {
     margin-top: 10rem;
@@ -316,6 +334,12 @@ export const SubBoxStarImg = styled.img`
     top: -1rem;
     left: -1rem;
   }
+
+  ${rwd('md')} { 
+    width: 30px;
+    top: 0rem;
+    left: 0rem;
+  }
 `
 
 export const SubBoxSnowImg = styled.img`
@@ -332,5 +356,11 @@ export const SubBoxSnowImg = styled.img`
 
   ${rwd('md')} { 
     width: 52px;
+  }
+
+  ${rwd('xs')} { 
+    width: 32px;
+    bottom: 0rem;
+    right: 0rem;
   }
 `
