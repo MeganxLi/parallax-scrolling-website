@@ -104,7 +104,7 @@ const Question = () => {
         ))}
 
       </QuestionCarousel>
-      <QuestionMark src="./images/question-mark.png" />
+      <QuestionMark src="./images/question-mark.png" alt="question mark" />
     </QuestionBlock>
   )
 }
