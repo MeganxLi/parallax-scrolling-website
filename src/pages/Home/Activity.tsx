@@ -5,7 +5,7 @@ import {
   GreenSmileImg,
   GreenSmileText,
   LiveText,
-  SignUpText, WhiteLine, WorkText,
+  SignUpText, StarImgBottom, StarImgTop, WhiteLine, WorkText,
 } from '../../styled/pages/Home/Activity'
 
 const Activity = () => (
@@ -25,6 +25,7 @@ const Activity = () => (
       </GreenSmileText>
     </GreenSmile>
     <ActivityContent>
+      <StarImgTop src="./images/star.png" alt="Star" />
       <SignUpText>
         <ActivityItemTitle>報名時間</ActivityItemTitle>
         <ActivityItemSub>SING UP</ActivityItemSub>
@@ -54,7 +55,6 @@ const Activity = () => (
           11/28(一) 中午 12:00
         </ActivityItemContent>
       </WorkText>
-
       <LiveText>
         <ActivityItemTitle>線上直播</ActivityItemTitle>
         <ActivityItemSub>STREAM</ActivityItemSub>
@@ -62,7 +62,7 @@ const Activity = () => (
           11/3 - 11/24（每週四）
         </ActivityItemContent>
       </LiveText>
-
+      <StarImgBottom src="./images/star.png" alt="Star" />
     </ActivityContent>
 
   </ActivityBlock>

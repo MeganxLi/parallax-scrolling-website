@@ -5,7 +5,7 @@ import colors from '../../util/Variables'
 export const ActivityBlock = styled.div`
   position: relative;
   overflow: hidden;
-  height: 2745px;
+  height: 2800px;
 `
 
 export const ActivityItemTitle = styled.h5`
@@ -28,6 +28,7 @@ export const ActivityItemContent = styled.p`
   font-weight: bold;
   font-size: 44px;
   color: ${colors.black.core};
+  margin-top: 1.5rem;
   margin-left: 8rem;
 `
 
@@ -36,10 +37,25 @@ export const ActivityContent = styled.div`
   z-index: 5;
 `
 
-export const SignUpText = styled.div``
-export const GameStartText = styled.div``
-export const WorkText = styled.div``
-export const LiveText = styled.div``
+export const SignUpText = styled.div`
+  margin-top: 24rem;
+  margin-left: 40rem;
+`
+
+export const GameStartText = styled.div`
+  margin-top: 24rem;
+  margin-left: 68rem;
+`
+
+export const WorkText = styled.div`
+  margin-top: 34rem;
+  margin-left: 64rem;
+`
+
+export const LiveText = styled.div`
+  margin-top: 14rem;
+  margin-left: 36rem;
+`
 
 export const WhiteLine = styled.img`
   position: absolute;
@@ -109,4 +125,15 @@ export const GreenSmileText = styled.div`
       transform: rotate(38deg) translate(119px,-290px);
     }
   }
+`
+
+export const StarImgTop = styled.img`
+  position: absolute;
+  top: 10rem;
+  right: 20%;
+`
+export const StarImgBottom = styled.img`
+  position: absolute;
+  bottom: -8rem;
+  left: 5%;
 `
