@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react'
-import { rwd } from '../util/Mixins'
 
+import { rwd } from '../util/Mixins'
 import colors from '../util/Variables'
 
 export const Header = styled.header`
@@ -75,7 +75,7 @@ export const MenuBox = styled(Nav) <HeaderProps>`
   right: 0;
   left: 0;
   z-index: 8;
-  transform: translate3d(0, ${(props) => props.active ? "-500" : "0"}px, 0);
+  transform: translate3d(0, ${(props) => (props.active ? '-500' : '0')}px, 0);
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 
