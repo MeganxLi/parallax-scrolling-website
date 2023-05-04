@@ -4,6 +4,7 @@ import {
   GreenSmile,
   GreenSmileImg,
   GreenSmileText,
+  GreenSnow,
   LiveText,
   SignUpText, StarImgBottom, StarImgTop, WhiteLine, WorkText,
 } from '../../styled/pages/Home/Activity'
@@ -63,8 +64,8 @@ const Activity = () => (
         </ActivityItemContent>
       </LiveText>
       <StarImgBottom src="./images/star.png" alt="Star" />
+      <GreenSnow src="./images/green-snow.png" alt="green snow" />
     </ActivityContent>
-
   </ActivityBlock>
 )
 

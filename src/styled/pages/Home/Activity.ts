@@ -334,6 +334,8 @@ export const GreenSmileText = styled.div`
 `
 
 export const StarImg = styled.img`
+  position: absolute;
+
   ${rwd('lg')}{
     width: 150px;
   }
@@ -348,7 +350,6 @@ export const StarImg = styled.img`
 `
 
 export const StarImgTop = styled(StarImg)`
-  position: absolute;
   top: 10rem;
   right: 20%;
 
@@ -359,11 +360,16 @@ export const StarImgTop = styled(StarImg)`
 `
 
 export const StarImgBottom = styled(StarImg)`
-  position: absolute;
   bottom: -8rem;
   left: 5%;
 
   ${rwd('sm')}{
     bottom: -3rem;
   }
+`
+
+export const GreenSnow = styled(StarImg)`
+  bottom: 5rem;
+  right: 0;
+
 `
