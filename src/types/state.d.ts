@@ -9,3 +9,8 @@ type CarouselListType = {
   text: string
   rwd: number
 }
+
+type CollaborateListType = {
+  title: string,
+  src: string
+}
