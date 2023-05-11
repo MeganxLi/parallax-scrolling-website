@@ -42,7 +42,7 @@ export const CollaborateContainer = styled.div`
   width: 100%;
   margin: 0 auto;
 
-  ${rwd('md')} {
+  ${rwd('lg')} {
     gap: 32px;
     flex-direction: column;
     align-items: flex-start;
