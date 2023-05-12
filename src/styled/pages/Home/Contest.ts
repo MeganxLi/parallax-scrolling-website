@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react'
 
+import { rwd } from '../../util/Mixins'
 import colors from '../../util/Variables'
 
 export const ContestBlock = styled.div`
@@ -15,7 +16,15 @@ export const ContestTitle = styled.h1`
   font-weight: bold;
   font-size: 120px;
   letter-spacing: 0.15em;
-  white-space:nowrap;
+  white-space: nowrap;
+
+  ${rwd('lg')} {
+   font-size: 60px;
+  }
+
+  ${rwd('sm')} {
+    font-size: 24px;
+  }
 `
 
 export const ContestPoint = styled.span`
@@ -25,11 +34,17 @@ export const ContestPoint = styled.span`
     background-color: ${colors.white};
     border-radius: 50%;
     margin: 4rem auto;
+
+    ${rwd('sm')} {
+      width: 12px;
+      height: 12px;
+      margin: 2rem auto;
+    }
 `
 
 export const ContestCard = styled.div`
   position: relative;
-  width: 100%;
+  width: 80%;
   max-width: 1045px;
   height: 440px;
   margin: 5rem auto;
@@ -41,16 +56,23 @@ export const ContestCard = styled.div`
     position: absolute;
     background-color: ${colors.green[1]};
     top: 50%;
-    left: 0%;
     z-index: 0;
   } 
 
   &:first-of-type::before {
+    left: 0%;
     transform: translate(-70%,-50%);
   }
     
   &:last-of-type::before {
+    right: 0;
     transform: translate(70%, -50%);
+  }
+
+  ${rwd('sm')} {
+    height: 100px;
+    max-width: 280px;
+     margin: 3rem auto;
   }
 `
 
@@ -65,6 +87,16 @@ export const ContestCardTitle = styled.h4`
   width: 100%;
   text-align: center;
   z-index: 5;
+
+  ${rwd('lg')} {
+    font-size: 40px;
+    top: -1rem;
+  }
+
+  ${rwd('sm')} {
+    font-size: 16px;
+    top: -0.5rem;
+  }
 `
 
 export const ContestCardContent = styled.div`
@@ -81,7 +113,6 @@ export const ContestCardContent = styled.div`
   justify-content: center;
   
   span {
-    display:block;
     display: list-item;
     margin-left: 2rem;
     padding: 1rem 0;
@@ -90,6 +121,35 @@ export const ContestCardContent = styled.div`
   li  {
     margin: 1rem 0;
     margin-left: 3rem;
+  }
+
+  ${rwd('lg')} {
+    font-size: 32px;
+    padding: 4rem;
+  }
+
+  ${rwd('sm')} {
+    font-size: 12px;  
+    padding: 1rem;
+    border-radius: 25px;
+
+    p{
+      font-weight: bold;
+      &:last-child{
+        margin-top: 8px;
+      }
+    }
+
+    span {
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+
+    li  {
+      margin:0;
+      margin-left: 2rem;
+    }
   }
 `
 
@@ -115,17 +175,49 @@ export const ContestButton = styled.button`
     border-radius: 20px;
     background-color: ${colors.green[2]};
     position: absolute;
+    top: -1rem;
   }
 
   &::before{
     transform: rotate(-36.46deg);
-    top: -1rem;
     left: -6rem;
   }
 
   &::after{
     transform: rotate(36.46deg);
-    top: -1rem;
     right: -6rem;
+  }
+
+  ${rwd('lg')} {
+    font-size: 32px;
+    padding: 8px 45px;
+
+    &::after, &::before{
+      width: 10px;
+      height: 80px;
+      border-radius: 6px;
+      top: 6px;
+    }
+  }
+
+  ${rwd('sm')} {
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 6px;
+
+    &::after, &::before{
+      width: 6px;
+      height: 50px;
+      border-radius: 6px;
+      top: -4px;
+    }
+
+    &::before{
+      left: -3rem;
+    }
+
+    &::after{
+      right: -3rem;
+    }
   }
 `
