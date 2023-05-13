@@ -19,3 +19,7 @@ interface CarouselProps {
   boxColor: string
   order: number
 }
+
+interface ActivityItemProps {
+  variant: string
+}
