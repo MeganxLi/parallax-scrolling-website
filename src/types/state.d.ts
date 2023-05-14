@@ -23,6 +23,7 @@ type ActivityContentListType = {
 }
 
 type ResolveListType = {
+  color: string,
   week: number,
   title: string,
   tag: string[],

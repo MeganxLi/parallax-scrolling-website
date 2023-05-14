@@ -23,3 +23,7 @@ interface CarouselProps {
 interface ActivityItemProps {
   variant: string
 }
+
+interface ResolveItemProps {
+  color: string
+}
