@@ -7,6 +7,10 @@ export const CollaborateBlock = styled.div`
  background-color: ${colors.orange[1]};
  padding-top: 140px;
  padding-bottom: 350px;
+
+ ${rwd('lg')} {
+    padding: 140px;
+  }
 `
 
 export const CollaborateTitle = styled.div`
