@@ -31,7 +31,7 @@ const Resolve = () => (
     </ResolveHeader>
     <ResolveBody>
       {ResolveList.map((item) => (
-        <ResolveSection key={item.week}>
+        <ResolveSection key={item.week} className={item.week === 1 ? 'active' : ''}>
           <ResolveItemSub>
             {`/ ${item.title} /`}
           </ResolveItemSub>
