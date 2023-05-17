@@ -9,3 +9,24 @@ type CarouselListType = {
   text: string
   rwd: number
 }
+
+type CollaborateListType = {
+  title: string,
+  src: string
+}
+
+type ActivityContentListType = {
+  class_name: string,
+  title: string,
+  sub: string,
+  content: JSX.Element,
+}
+
+type ResolveListType = {
+  color: string,
+  week: number,
+  title: string,
+  tag: string[],
+  ui_time: string,
+  font_time: string,
+}
