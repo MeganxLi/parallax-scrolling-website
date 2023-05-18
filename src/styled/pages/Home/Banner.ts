@@ -259,7 +259,7 @@ export const FlyImg = styled.div`
   position: absolute; 
   top: 50%;
   right: 10%;
-  background-image: url("/images/fly.png");
+  background-image: url("/images/fly-img.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 275px;
