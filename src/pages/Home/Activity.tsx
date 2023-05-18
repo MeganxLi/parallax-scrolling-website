@@ -29,7 +29,7 @@ const Activity = () => (
       </GreenSmileText>
     </GreenSmile>
     <ActivityContent>
-      <StarImgTop src="./images/star.png" alt="Star" />
+      <StarImgTop src="./images/star-img.png" alt="Star" />
       {ActivityContentList.map((item: ActivityContentListType) => (
         <ActivityItem className={item.class_name} key={item.title}>
           <ActivityItemTitle>{item.title}</ActivityItemTitle>
@@ -37,7 +37,7 @@ const Activity = () => (
           <ActivityItemContent>{item.content}</ActivityItemContent>
         </ActivityItem>
       ))}
-      <StarImgBottom src="./images/star.png" alt="Star" />
+      <StarImgBottom src="./images/star-img.png" alt="Star" />
       <GreenSnow src="./images/green-snow.png" alt="green snow" />
     </ActivityContent>
   </ActivityBlock>

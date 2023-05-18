@@ -50,7 +50,7 @@ const Start = () => {
       </CircleMain>
       <CircleSub>
         <SubBox>
-          <SubBoxStarImg src="./images/star.png" alt="star" />
+          <SubBoxStarImg src="./images/star-img.png" alt="star" />
           <SubBoxTitle>年度最強合作</SubBoxTitle>
           <SubBoxTitleBg>三大主題來襲</SubBoxTitleBg>
           <SubBoxText>各路廠商強強聯手！</SubBoxText>

@@ -29,7 +29,7 @@ const Loading = ({ switchPage }: Props) => {
   return (
     <LoadingPage>
       <LoadingBlack>
-        <LoadingImg src={`./images/${finish ? 'caterpillar' : 'butter-fly'}.png`} alt="loading img" move={loadingTime} />
+        <LoadingImg src={`./images/${finish ? 'caterpillar-img' : 'butter-fly'}.png`} alt="loading img" move={loadingTime} />
         <ProgressBar>
           <Bar move={loadingTime} />
         </ProgressBar>
