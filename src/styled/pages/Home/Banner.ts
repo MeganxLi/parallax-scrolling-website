@@ -45,7 +45,7 @@ export const BannerTittle = styled.div`
     z-index: -1;
     top: 130px;
     left: 5px;
-    background-image: url("./images/home-title-bg.png");
+    background-image: url("/images/home-title-bg.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
@@ -238,18 +238,18 @@ export const HouseImg = styled.div`
   position: absolute; 
   top: 50%;
   left: 20%;
-  background-image: url("./images/house.png");
+  background-image: url("/images/house-img.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 350px;
   height: 285px;
 
   &:hover {
-    background-image: url("./images/house-hover.png");
+    background-image: url("/images/house-hover.png");
   }
 
   ${rwd('lg')} { 
-    background-image: url("./images/house-hover.png");
+    background-image: url("/images/house-hover.png");
     width: 190px;
     height: 160px;
   }
@@ -259,18 +259,18 @@ export const FlyImg = styled.div`
   position: absolute; 
   top: 50%;
   right: 10%;
-  background-image: url("./images/fly.png");
+  background-image: url("/images/fly.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 275px;
   height: 220px;
 
   &:hover {
-    background-image: url("./images/fly-hover.png");
+    background-image: url("/images/fly-hover.png");
   }
 
   ${rwd('lg')} { 
-    background-image: url("./images/FlyHover.png");
+    background-image: url("/images/fly-hover.png");
     top: 70%;
     width: 200px;
     height: 113px;
