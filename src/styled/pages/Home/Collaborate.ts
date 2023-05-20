@@ -4,7 +4,6 @@ import { rwd } from '../../util/Mixins'
 import colors from '../../util/Variables'
 
 export const CollaborateBlock = styled.div`
- background-color: ${colors.orange[1]};
  padding-top: 140px;
  padding-bottom: 350px;
 
@@ -14,7 +13,6 @@ export const CollaborateBlock = styled.div`
 `
 
 export const CollaborateTitle = styled.div`
-  color: ${colors.white};
   font-size: 52px;
   display: flex;
   align-items: center;
