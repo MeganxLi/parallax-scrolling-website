@@ -46,7 +46,7 @@ const Collaborate = () => {
       '<',
     ).fromTo(
       collaborateListRef.current,
-      { transform: 'translateY(500px)', opacity: 0 },
+      { transform: 'translateY(100px)', opacity: 0 },
       { transform: 'translateY(0)', opacity: 1 },
     )
   }, [])

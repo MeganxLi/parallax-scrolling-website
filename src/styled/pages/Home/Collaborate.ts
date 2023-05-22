@@ -4,11 +4,17 @@ import { rwd } from '../../util/Mixins'
 import colors from '../../util/Variables'
 
 export const CollaborateBlock = styled.div`
- padding-top: 140px;
- padding-bottom: 350px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 140px;
+  padding-bottom: 350px;
 
- ${rwd('lg')} {
+  ${rwd('lg')} {
     padding: 140px;
+  }
+
+  ${rwd('sm')} {
+    padding: 3rem;
   }
 `
 
@@ -35,6 +41,12 @@ export const CollaborateTitle = styled.div`
     height: 20px;
    }
   }
+
+  ${rwd('sm')} { 
+    svg {
+      display: none;
+    }
+  }
 `
 
 export const CollaborateContainer = styled.div`
@@ -53,6 +65,7 @@ export const CollaborateContainer = styled.div`
 
 export const CollaborateItem = styled.div`
   width: 25%;
+  min-width: 150px;
   height: auto;
   aspect-ratio: 1 / 1;
   border-radius: 50px;
