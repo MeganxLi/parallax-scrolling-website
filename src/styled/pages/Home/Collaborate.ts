@@ -13,7 +13,7 @@ export const CollaborateBlock = styled.div`
     padding: 140px;
   }
 
-  ${rwd('sm')} {
+  ${rwd('md')} {
     padding: 3rem;
   }
 `
@@ -33,7 +33,7 @@ export const CollaborateTitle = styled.div`
   }
 
   ${rwd('lg')} {
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 3rem;
 
     svg {
@@ -42,7 +42,10 @@ export const CollaborateTitle = styled.div`
    }
   }
 
-  ${rwd('sm')} { 
+  ${rwd('md')} { 
+    font-size: 24px;
+    margin-bottom: 3rem;
+
     svg {
       display: none;
     }

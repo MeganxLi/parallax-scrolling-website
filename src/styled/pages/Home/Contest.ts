@@ -22,7 +22,7 @@ export const ContestTitle = styled.h1`
    font-size: 60px;
   }
 
-  ${rwd('sm')} {
+  ${rwd('md')} {
     font-size: 24px;
   }
 `
@@ -35,14 +35,14 @@ export const ContestPoint = styled.span`
     border-radius: 50%;
     margin: 4rem auto;
 
-    ${rwd('sm')} {
+    ${rwd('md')} {
       width: 12px;
       height: 12px;
       margin: 2rem auto;
     }
 `
 
-export const ContestCard = styled.div`
+export const ContestCard = styled.div<{ direction: boolean }>`
   position: relative;
   width: 80%;
   max-width: 1045px;
@@ -59,17 +59,12 @@ export const ContestCard = styled.div`
     z-index: 0;
   } 
 
-  &:first-of-type::before {
-    left: 0%;
-    transform: translate(-70%,-50%);
+  &::before{
+    ${({ direction }) => (direction ? 'left: 0%' : 'right: 0')};
+    transform: translate(${({ direction }) => (direction ? '-70%' : '70%')}, -50%);
   }
-    
-  &:last-of-type::before {
-    right: 0;
-    transform: translate(70%, -50%);
-  }
-
-  ${rwd('sm')} {
+  
+  ${rwd('md')} {
     height: 100px;
     max-width: 280px;
      margin: 3rem auto;
@@ -93,7 +88,7 @@ export const ContestCardTitle = styled.h4`
     top: -1rem;
   }
 
-  ${rwd('sm')} {
+  ${rwd('md')} {
     font-size: 16px;
     top: -0.5rem;
   }
@@ -124,11 +119,11 @@ export const ContestCardContent = styled.div`
   }
 
   ${rwd('lg')} {
-    font-size: 32px;
+    font-size: 28px;
     padding: 4rem;
   }
 
-  ${rwd('sm')} {
+  ${rwd('md')} {
     font-size: 12px;  
     padding: 1rem;
     border-radius: 25px;
@@ -168,6 +163,11 @@ export const ContestButton = styled.button`
   margin: 8rem auto;
   position: relative;
 
+  &:hover{
+    background-color: ${colors.white};
+    color: ${colors.green[1]};
+  }
+
   &::after, &::before{
     content: "";
     width: 20px;
@@ -190,7 +190,7 @@ export const ContestButton = styled.button`
 
   ${rwd('lg')} {
     font-size: 32px;
-    padding: 8px 45px;
+    padding: 8px 4.5rem;
 
     &::after, &::before{
       width: 10px;
@@ -200,7 +200,7 @@ export const ContestButton = styled.button`
     }
   }
 
-  ${rwd('sm')} {
+  ${rwd('md')} {
     font-size: 20px;
     line-height: 24px;
     border-radius: 6px;
