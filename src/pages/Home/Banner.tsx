@@ -1,24 +1,12 @@
-import { useEffect, useRef } from 'react'
-
-import { gsap } from 'gsap'
-
 import { ReactComponent as RightArrowIcon } from '../../assets/svg/right_arrow.svg'
 import {
   BannerBlock, BannerTittle, SignUpButton, RectangleTop, RectangleRight,
   StarLeft, StarRight, FrontEnd, HouseImg, FlyImg, LoopText,
 } from '../../styled/pages/Home/Banner'
+import useAnimationLoopText from '../../util/useAnimation'
 
 const Banner = () => {
-  const LoopTextRef = useRef<HTMLSpanElement>(null)
-
-  useEffect(() => {
-    gsap.to(LoopTextRef.current, {
-      xPercent: '-50',
-      ease: 'none',
-      duration: 8,
-      repeat: -1,
-    })
-  }, [])
+  useAnimationLoopText('.banner-loop')
 
   return (
     <BannerBlock>
@@ -42,7 +30,7 @@ const Banner = () => {
       <FrontEnd>FRONT END</FrontEnd>
       <HouseImg />
       <FlyImg />
-      <LoopText ref={LoopTextRef}>
+      <LoopText className="banner-loop">
         THEF2E THEF2E THEF2E THEF2E THEF2E THEF2E THEF2E THEF2E THEF2E
       </LoopText>
     </BannerBlock>

@@ -1,23 +1,13 @@
-import { useEffect } from 'react'
-
-import { gsap } from 'gsap'
-
 import Tag from '../../components/Tag'
 import {
   CircleMainTitle, CircleMain, CircleMainBox, StartBlock,
   StartLoopText, GreenSnow, CircleMainItem1, CircleSub,
   SubBoxTitle, SubBoxTitleBg, SubBoxText, SubBox, SubBoxStarImg, SubBoxSnowImg,
 } from '../../styled/pages/Home/Start'
+import useAnimationLoopText from '../../util/useAnimation'
 
 const Start = () => {
-  useEffect(() => {
-    gsap.to('.start-loop-text', {
-      xPercent: '-50',
-      ease: 'none',
-      duration: 8,
-      repeat: -1,
-    })
-  }, [])
+  useAnimationLoopText('.start-loop-text')
 
   return (
     <StartBlock>
