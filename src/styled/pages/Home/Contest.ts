@@ -42,7 +42,7 @@ export const ContestPoint = styled.span`
     }
 `
 
-export const ContestCard = styled.div<{ direction: boolean }>`
+export const ContestCard = styled.div<{ direction: string }>`
   position: relative;
   width: 80%;
   max-width: 1045px;
@@ -60,7 +60,7 @@ export const ContestCard = styled.div<{ direction: boolean }>`
   } 
 
   &::before{
-    ${({ direction }) => (direction ? 'left: 0%' : 'right: 0')};
+    ${({ direction }) => (direction === 'true' ? 'left: 0%' : 'right: 0')};
     transform: translate(${({ direction }) => (direction ? '-70%' : '70%')}, -50%);
   }
   
