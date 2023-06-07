@@ -41,14 +41,15 @@ const Activity = () => {
 
       switch (true) {
         case innerWidth > replaceText(breakpoints['2xl']):
+
           rotation = 135
           break
 
-        case innerWidth > replaceText(breakpoints.xl):
+        case innerWidth > replaceText(breakpoints.lg) && innerWidth < replaceText(breakpoints['2xl']):
           rotation = 120
           break
 
-        case innerWidth > replaceText(breakpoints.md):
+        case innerWidth >= replaceText(breakpoints.md) && innerWidth < replaceText(breakpoints.lg):
           rotation = 25
           break
 
