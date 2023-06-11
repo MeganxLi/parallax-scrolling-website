@@ -104,7 +104,7 @@ const Contest = () => {
       <ContestTitle className="contest-title">區區修煉已經無法滿足了嗎？還有比賽等著你！</ContestTitle>
       <div className={classNameList[0].className}>
         <ContestPoint />
-        <ContestCard direction='true'>
+        <ContestCard direction="true">
           <ContestCardTitle>評審機制</ContestCardTitle>
           <ContestCardContent>
             <p>初選</p>
@@ -116,7 +116,7 @@ const Contest = () => {
       </div>
       <div className={classNameList[1].className}>
         <ContestPoint />
-        <ContestCard direction='false'>
+        <ContestCard direction="false">
           <ContestCardTitle>比賽獎項</ContestCardTitle>
           <ContestCardContent>
             <ol>

@@ -28,7 +28,7 @@ const Question = () => {
         pin: true,
         pinSpacing: false,
         scrub: 2,
-        markers: true,
+        markers: true, // 顯示 ScrollTrigger 的觸發區域
         onToggle: (self) => {
           if (self.isActive) {
             gsap.to(questionBlockRef.current, {
