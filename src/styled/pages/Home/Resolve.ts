@@ -111,14 +111,14 @@ export const ResolveItemTitle = styled.h2<ResolveItemProps>`
 `
 
 export const ResolveBody = styled.div`
-  display: flex;
+  display: grid;
   flex-direction: column;
-  align-items: center;
+  justify-items: center;
   gap: 14.5rem;
 
 
   ${rwd('md')} {
-    gap: 5rem;
+    gap: 1.5rem;
   }
 
   ${rwd('sm')} {
@@ -127,10 +127,21 @@ export const ResolveBody = styled.div`
 `
 
 export const ResolveSection = styled.div`
-  margin-bottom: 14.5rem;
+  grid-area: 1/1;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all .5s;
+  
+  &.active{
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   ${rwd('md')} {
+    grid-area: auto;
     opacity: 0.2;
+    transform: translateY(0);
+
 
     &.active {
       opacity: 1;
