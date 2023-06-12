@@ -23,45 +23,40 @@ import {
 
 const Resolve = () => {
   const resolveBlockRef = useRef<HTMLDivElement>(null)
-  const resolveItemRef = useRef<(HTMLElement | null)[]>([])
+  const resolveItemRefs = useRef<(HTMLElement | null)[]>([])
+  const resolveSectionRefs = useRef<(HTMLElement | null)[]>([])
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
-
-    // const scrollTL = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: resolveBlockRef.current,
-    //     start: 'top top',
-    //     end: '+=1000',
-    //     pin: true, // 區塊固定
-    //     scrub: 1,
-    //     markers: true,
-    //   },
-    // })
 
     const scrollTL = gsap.timeline({
       scrollTrigger: {
         trigger: resolveBlockRef.current,
         start: 'top top',
-        end: 'bottom bottom',
-        pinSpacing: false,
+        end: '+=300', // 調整結束位置，確保在需要固定的位置之前結束
         pin: true,
         markers: true,
         scrub: 1,
         onUpdate: (self) => {
           const activeIndex = Math.floor(self.progress * 3)
-          resolveItemRef.current.forEach((item, index) => {
-            item?.classList.toggle('active', index === activeIndex)
+          const cappedIndex = activeIndex <= 2 ? activeIndex : 2 // 不得超過 2
+
+          resolveItemRefs.current.forEach((item, index) => {
+            item?.classList.toggle('active', index === cappedIndex)
+          })
+          resolveSectionRefs.current.forEach((section, index) => {
+            section?.classList.toggle('active', index === cappedIndex)
           })
         },
       },
     })
 
-    scrollTL.to('.resolve-item', {
-      xPercent: -200,
-      duration: 2,
-      ease: 'power2.inOut',
-    })
+    scrollTL
+      .to('.resolve-item', {
+        xPercent: -200,
+        duration: 2,
+        ease: 'power2.inOut',
+      })
 
     // scrollTL
     //   .to(resolveBlockRef.current, {
@@ -70,26 +65,31 @@ const Resolve = () => {
     //   .to('.resolve-item', {
     //     xPercent: -200,
     //     onStart: () => {
-    //       resolveItemRef.current[0]?.classList.add('active')
-    //       resolveItemRef.current[1]?.classList.remove('active')
-    //       resolveItemRef.current[2]?.classList.remove('active')
+    //       resolveItemRefs.current[0]?.classList.add('active')
+    //       resolveItemRefs.current[1]?.classList.remove('active')
+    //       resolveItemRefs.current[2]?.classList.remove('active')
     //     },
     //     onUpdate: () => {
-    //       resolveItemRef.current[0]?.classList.remove('active')
-    //       resolveItemRef.current[1]?.classList.add('active')
-    //       resolveItemRef.current[2]?.classList.remove('active')
+    //       resolveItemRefs.current[0]?.classList.remove('active')
+    //       resolveItemRefs.current[1]?.classList.add('active')
+    //       resolveItemRefs.current[2]?.classList.remove('active')
     //     },
     //     onEnd: () => {
-    //       resolveItemRef.current[0]?.classList.remove('active')
-    //       resolveItemRef.current[1]?.classList.remove('active')
-    //       resolveItemRef.current[2]?.classList.add('active')
+    //       resolveItemRefs.current[0]?.classList.remove('active')
+    //       resolveItemRefs.current[1]?.classList.remove('active')
+    //       resolveItemRefs.current[2]?.classList.add('active')
     //     },
     //   })
   }, [])
 
   const handleResolveItemRef = (el: HTMLElement | null) => {
-    resolveItemRef.current = [...resolveItemRef.current, el]
+    resolveItemRefs.current = [...resolveItemRefs.current, el]
   }
+
+  const handleResolveSectionRefs = (el: HTMLElement | null) => {
+    resolveSectionRefs.current = [...resolveSectionRefs.current, el]
+  }
+
   return (
     <ResolveBlock ref={resolveBlockRef}>
       <ResolveHeader>
@@ -110,7 +110,11 @@ const Resolve = () => {
       </ResolveHeader>
       <ResolveBody>
         {ResolveList.map((item) => (
-          <ResolveSection key={item.week} className={item.week === 1 ? 'active' : ''}>
+          <ResolveSection
+            key={item.week}
+            ref={handleResolveSectionRefs}
+            className={item.week === 1 ? 'active' : ''}
+          >
             <ResolveItemSub>
               {`/ ${item.title} /`}
             </ResolveItemSub>
