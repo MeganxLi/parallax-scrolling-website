@@ -33,10 +33,10 @@ const Resolve = () => {
       scrollTrigger: {
         trigger: resolveBlockRef.current,
         start: 'top top',
-        end: '+=300', // 調整結束位置，確保在需要固定的位置之前結束
-        pin: true,
-        markers: true,
-        scrub: 1,
+        end: 'bottom bottom',
+        pin: true, // 固定定位
+        scrub: 0.5, // 平滑滾動
+        // markers: true,
         onUpdate: (self) => {
           const activeIndex = Math.floor(self.progress * 3)
           const cappedIndex = activeIndex <= 2 ? activeIndex : 2 // 不得超過 2
@@ -53,33 +53,10 @@ const Resolve = () => {
 
     scrollTL
       .to('.resolve-item', {
-        xPercent: -200,
-        duration: 2,
+        xPercent: '-180',
+        duration: 1, // 調整滑動速度的持續時間
         ease: 'power2.inOut',
       })
-
-    // scrollTL
-    //   .to(resolveBlockRef.current, {
-    //     y: '0',
-    //   }, '<')
-    //   .to('.resolve-item', {
-    //     xPercent: -200,
-    //     onStart: () => {
-    //       resolveItemRefs.current[0]?.classList.add('active')
-    //       resolveItemRefs.current[1]?.classList.remove('active')
-    //       resolveItemRefs.current[2]?.classList.remove('active')
-    //     },
-    //     onUpdate: () => {
-    //       resolveItemRefs.current[0]?.classList.remove('active')
-    //       resolveItemRefs.current[1]?.classList.add('active')
-    //       resolveItemRefs.current[2]?.classList.remove('active')
-    //     },
-    //     onEnd: () => {
-    //       resolveItemRefs.current[0]?.classList.remove('active')
-    //       resolveItemRefs.current[1]?.classList.remove('active')
-    //       resolveItemRefs.current[2]?.classList.add('active')
-    //     },
-    //   })
   }, [])
 
   const handleResolveItemRef = (el: HTMLElement | null) => {
