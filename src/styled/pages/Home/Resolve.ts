@@ -83,7 +83,7 @@ export const ResolveItemTitle = styled.h2<ResolveItemProps>`
   font-size: 200px;
   line-height: 240px;
   letter-spacing: 0.1em;
-  margin-right: calc(36rem - ((192rem - 100vw) / 4));
+  padding-right: calc(36rem - ((192rem - 100vw) / 4));
   transition: all .3s;
 
   &.active{
@@ -94,19 +94,19 @@ export const ResolveItemTitle = styled.h2<ResolveItemProps>`
   ${rwd('xl')} {
     font-size: 140px;
     line-height: 160px;
-    margin-right: calc(40rem - ((192rem - 100vw) / 4));
+    padding-right: calc(40rem - ((192rem - 100vw) / 4));
   }
 
   ${rwd('md')} {
     font-size: 80px;
     line-height: 100px;
-    margin-right: calc(42rem - ((192rem - 100vw) / 4));
+    padding-right: calc(42rem - ((192rem - 100vw) / 4));
   }
 
   ${rwd('sm')} {
     font-size: 40px;
     line-height: 48px;
-    margin-right: calc(48rem - ((192rem - 100vw) / 4));
+    padding-right: calc(48rem - ((192rem - 100vw) / 4));
   }
 `
 
