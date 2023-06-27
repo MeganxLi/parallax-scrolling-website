@@ -66,7 +66,6 @@ export const ResolveTitleBlock = styled.div`
     transform: translate(calc(72.3rem - ((192rem - 100vw) / 2)));
   }
 
-
   ${rwd('md')} {
     transform: translate(calc(79.3rem - ((192rem - 100vw) / 2)));
   }
@@ -91,7 +90,7 @@ export const ResolveItemTitle = styled.h2<ResolveItemProps>`
     font-weight: 600;
   }
 
-  ${rwd('xl')} {
+  ${rwd('2xl')} {
     font-size: 140px;
     line-height: 160px;
     padding-right: calc(40rem - ((192rem - 100vw) / 4));
@@ -159,7 +158,7 @@ export const ResolveItemSub = styled.div`
   text-align: center;
 
 
-  ${rwd('xl')} {
+  ${rwd('2xl')} {
     font-size: 50px;
   }
 
@@ -181,7 +180,7 @@ export const ResolveItemTag = styled.pre<ResolveItemProps>`
   letter-spacing: 0.15em;
   margin-right: 1rem;
 
-  ${rwd('xl')} {
+  ${rwd('2xl')} {
     font-size: 24px;
   }
 
@@ -203,7 +202,7 @@ export const ResolveItemContent = styled.div`
   letter-spacing: 0.1em;
   margin: 1.5rem 0;
 
-  ${rwd('xl')} {
+  ${rwd('2xl')} {
     font-size: 24px;
     line-height: 30px;
   }
