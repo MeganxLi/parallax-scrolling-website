@@ -18,6 +18,10 @@ export const ContestTitle = styled.h1`
   letter-spacing: 0.15em;
   white-space: nowrap;
 
+  ${rwd('2xl')} {
+   font-size: 90px;
+  }
+
   ${rwd('lg')} {
    font-size: 60px;
   }
@@ -118,6 +122,11 @@ export const ContestCardContent = styled.div`
     margin-left: 3rem;
   }
 
+  ${rwd('2xl')} {
+    font-size: 34px;
+    padding: 4rem;
+  }
+
   ${rwd('lg')} {
     font-size: 28px;
     padding: 4rem;
@@ -186,6 +195,19 @@ export const ContestButton = styled.button`
   &::after{
     transform: rotate(36.46deg);
     right: -6rem;
+  }
+
+
+  ${rwd('2xl')} {
+    font-size: 50px;
+    padding: 8px 4.5rem;
+
+    &::after, &::before{
+      width: 10px;
+      height: 80px;
+      border-radius: 6px;
+      top: 6px;
+    }
   }
 
   ${rwd('lg')} {
