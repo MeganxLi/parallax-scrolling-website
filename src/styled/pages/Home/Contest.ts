@@ -65,7 +65,7 @@ export const ContestCard = styled.div<{ direction: string }>`
 
   &::before{
     ${({ direction }) => (direction === 'true' ? 'left: 0%' : 'right: 0')};
-    transform: translate(${({ direction }) => (direction ? '-70%' : '70%')}, -50%);
+    transform: translate(${({ direction }) => (direction === 'true' ? '-70%' : '70%')}, -50%);
   }
   
   ${rwd('md')} {
