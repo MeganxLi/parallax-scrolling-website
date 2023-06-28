@@ -29,7 +29,7 @@ const Activity = () => {
         start: 'top top',
         end: 'bottom bottom',
         scrub: 2,
-        markers: true,
+        // markers: true, // 顯示觸發區域
       },
     })
 
