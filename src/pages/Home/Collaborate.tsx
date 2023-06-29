@@ -23,32 +23,34 @@ const Collaborate = () => {
     const scrollTL = gsap.timeline({
       scrollTrigger: {
         trigger: collaborateBlockRef.current,
-        start: 'top top',
+        start: 'top 80%', // 因為 block 有機會小於頁面高度，將 scroller start 放到下面
         end: 'bottom bottom',
         scrub: 2,
         once: true,
+        // markers: true, // 顯示觸發區域
       },
     })
 
-    scrollTL.fromTo(
-      collaborateBlockRef.current,
-      { backgroundColor: colors.orange[3] },
-      { backgroundColor: colors.orange[1], duration: durationSec, ease: 'power2.inOut' },
-    ).fromTo(
-      titleRef.current,
-      { color: colors.orange[1] },
-      { color: colors.white, duration: durationSec, ease: 'power2.inOut' },
-      '<',
-    ).fromTo(
-      '.icon-star',
-      { fill: colors.yellow[1] },
-      { fill: colors.white, duration: durationSec, ease: 'power2.inOut' },
-      '<',
-    ).fromTo(
-      collaborateListRef.current,
-      { transform: 'translateY(100px)', opacity: 0 },
-      { transform: 'translateY(0)', opacity: 1 },
-    )
+    scrollTL
+      .fromTo(
+        collaborateBlockRef.current,
+        { backgroundColor: colors.orange[3] },
+        { backgroundColor: colors.orange[1], duration: durationSec, ease: 'power2.inOut' },
+      ).fromTo(
+        titleRef.current,
+        { color: colors.orange[1] },
+        { color: colors.white, duration: durationSec, ease: 'power2.inOut' },
+        '<',
+      ).fromTo(
+        '.icon-star',
+        { fill: colors.yellow[1] },
+        { fill: colors.white, duration: durationSec, ease: 'power2.inOut' },
+        '<',
+      ).fromTo(
+        collaborateListRef.current,
+        { transform: 'translateY(100px)', opacity: 0 },
+        { transform: 'translateY(0)', opacity: 1 },
+      )
   }, [])
 
   return (
