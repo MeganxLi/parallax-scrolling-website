@@ -1,7 +1,8 @@
 # THE F2E 互動式網頁
 
-[HexSchool 2022 The F2E](https://2022.thef2e.com/) Week1 - The F2E 活動網站設計
 
+[HexSchool 2022 The F2E](https://2022.thef2e.com/) Week1 - The F2E 活動網站設計
+<img width="1181" alt="截圖 2023-06-30 上午12 15 21" src="https://github.com/MeganxLi/parallax-scrolling-website/assets/87239200/ecc6e8e7-201f-4079-beb1-254296d93001">
 <p align="center"><a href="https://meganxli.github.io/parallax-scrolling-website/" target="_blank">Demo website</a></p>
 
 ## Description
