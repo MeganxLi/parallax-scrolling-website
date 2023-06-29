@@ -7,7 +7,7 @@ export const CollaborateBlock = styled.div`
   position: relative;
   overflow: hidden;
   padding-top: 140px;
-  padding-bottom: 350px;
+  padding-bottom: 300px;
 
   ${rwd('lg')} {
     padding: 140px;
@@ -56,8 +56,7 @@ export const CollaborateContainer = styled.div`
   display: flex;
   justify-content: center;
   max-width: 1500px;
-  width: 100%;
-  margin: 0 auto;
+  margin: 0 6rem;
 
   ${rwd('lg')} {
     gap: 32px;
@@ -68,7 +67,6 @@ export const CollaborateContainer = styled.div`
 
 export const CollaborateItem = styled.div`
   width: 25%;
-  min-width: 150px;
   height: auto;
   aspect-ratio: 1 / 1;
   border-radius: 50px;
