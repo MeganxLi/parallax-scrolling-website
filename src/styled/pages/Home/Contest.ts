@@ -18,6 +18,10 @@ export const ContestTitle = styled.h1`
   letter-spacing: 0.15em;
   white-space: nowrap;
 
+  ${rwd('2xl')} {
+   font-size: 90px;
+  }
+
   ${rwd('lg')} {
    font-size: 60px;
   }
@@ -42,7 +46,7 @@ export const ContestPoint = styled.span`
     }
 `
 
-export const ContestCard = styled.div<{ direction: boolean }>`
+export const ContestCard = styled.div<{ direction: string }>`
   position: relative;
   width: 80%;
   max-width: 1045px;
@@ -60,8 +64,8 @@ export const ContestCard = styled.div<{ direction: boolean }>`
   } 
 
   &::before{
-    ${({ direction }) => (direction ? 'left: 0%' : 'right: 0')};
-    transform: translate(${({ direction }) => (direction ? '-70%' : '70%')}, -50%);
+    ${({ direction }) => (direction === 'true' ? 'left: 0%' : 'right: 0')};
+    transform: translate(${({ direction }) => (direction === 'true' ? '-70%' : '70%')}, -50%);
   }
   
   ${rwd('md')} {
@@ -116,6 +120,11 @@ export const ContestCardContent = styled.div`
   li  {
     margin: 1rem 0;
     margin-left: 3rem;
+  }
+
+  ${rwd('2xl')} {
+    font-size: 34px;
+    padding: 4rem;
   }
 
   ${rwd('lg')} {
@@ -186,6 +195,19 @@ export const ContestButton = styled.button`
   &::after{
     transform: rotate(36.46deg);
     right: -6rem;
+  }
+
+
+  ${rwd('2xl')} {
+    font-size: 50px;
+    padding: 8px 4.5rem;
+
+    &::after, &::before{
+      width: 10px;
+      height: 80px;
+      border-radius: 6px;
+      top: 6px;
+    }
   }
 
   ${rwd('lg')} {

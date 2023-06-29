@@ -18,14 +18,14 @@ export const Header = styled.header`
 `
 
 export const HeaderTitle = styled.h3`
-  font-size: 24px;
+  font-size: 32px;
   flex: none;
   margin-right: auto;
   font-family: 'GenSenRounded-H';
 `
 
 export const Nav = styled.nav`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 900;
 
   ul{

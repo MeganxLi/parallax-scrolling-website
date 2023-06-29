@@ -66,7 +66,6 @@ export const ResolveTitleBlock = styled.div`
     transform: translate(calc(72.3rem - ((192rem - 100vw) / 2)));
   }
 
-
   ${rwd('md')} {
     transform: translate(calc(79.3rem - ((192rem - 100vw) / 2)));
   }
@@ -83,7 +82,7 @@ export const ResolveItemTitle = styled.h2<ResolveItemProps>`
   font-size: 200px;
   line-height: 240px;
   letter-spacing: 0.1em;
-  margin-right: calc(36rem - ((192rem - 100vw) / 4));
+  padding-right: calc(36rem - ((192rem - 100vw) / 4));
   transition: all .3s;
 
   &.active{
@@ -91,34 +90,34 @@ export const ResolveItemTitle = styled.h2<ResolveItemProps>`
     font-weight: 600;
   }
 
-  ${rwd('xl')} {
+  ${rwd('2xl')} {
     font-size: 140px;
     line-height: 160px;
-    margin-right: calc(40rem - ((192rem - 100vw) / 4));
+    padding-right: calc(40rem - ((192rem - 100vw) / 4));
   }
 
   ${rwd('md')} {
     font-size: 80px;
     line-height: 100px;
-    margin-right: calc(42rem - ((192rem - 100vw) / 4));
+    padding-right: calc(42rem - ((192rem - 100vw) / 4));
   }
 
   ${rwd('sm')} {
     font-size: 40px;
     line-height: 48px;
-    margin-right: calc(48rem - ((192rem - 100vw) / 4));
+    padding-right: calc(48rem - ((192rem - 100vw) / 4));
   }
 `
 
 export const ResolveBody = styled.div`
-  display: flex;
+  display: grid;
   flex-direction: column;
-  align-items: center;
+  justify-items: center;
   gap: 14.5rem;
 
 
   ${rwd('md')} {
-    gap: 5rem;
+    gap: 1.5rem;
   }
 
   ${rwd('sm')} {
@@ -127,10 +126,21 @@ export const ResolveBody = styled.div`
 `
 
 export const ResolveSection = styled.div`
-  margin-bottom: 14.5rem;
+  grid-area: 1/1;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all .5s;
+  
+  &.active{
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   ${rwd('md')} {
+    grid-area: auto;
     opacity: 0.2;
+    transform: translateY(0);
+
 
     &.active {
       opacity: 1;
@@ -148,7 +158,7 @@ export const ResolveItemSub = styled.div`
   text-align: center;
 
 
-  ${rwd('xl')} {
+  ${rwd('2xl')} {
     font-size: 50px;
   }
 
@@ -170,7 +180,7 @@ export const ResolveItemTag = styled.pre<ResolveItemProps>`
   letter-spacing: 0.15em;
   margin-right: 1rem;
 
-  ${rwd('xl')} {
+  ${rwd('2xl')} {
     font-size: 24px;
   }
 
@@ -192,7 +202,7 @@ export const ResolveItemContent = styled.div`
   letter-spacing: 0.1em;
   margin: 1.5rem 0;
 
-  ${rwd('xl')} {
+  ${rwd('2xl')} {
     font-size: 24px;
     line-height: 30px;
   }
