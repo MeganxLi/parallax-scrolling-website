@@ -1,9 +1,20 @@
-# THE F2E 互動式網頁
+<div align="center">
+    <h2>THE F2E 互動式網頁</h2>
+</div>
 
-
-[HexSchool 2022 The F2E](https://2022.thef2e.com/) Week1 - The F2E 活動網站設計
 <img width="1181" alt="截圖 2023-06-30 上午12 15 21" src="https://github.com/MeganxLi/parallax-scrolling-website/assets/87239200/ecc6e8e7-201f-4079-beb1-254296d93001">
-<p align="center"><a href="https://meganxli.github.io/parallax-scrolling-website/" target="_blank">Demo website</a></p>
+
+<p align="center">
+   <a href="https://2022.thef2e.com/">HexSchool 2022 The F2E</a> Week1 - The F2E 活動網站設計
+</p>
+<p align="center">
+  <a href="https://meganxli.github.io/parallax-scrolling-website/">
+    <img src="https://img.shields.io/badge/Demo_website-Your?&style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5IDNINUMzLjg5NTQzIDMgMyAzLjg5NTQzIDMgNVYxOUMzIDIwLjEwNDYgMy44OTU0MyAyMSA1IDIxSDE5QzIwLjEwNDYgMjEgMjEgMjAuMTA0NiAyMSAxOVY1QzIxIDMuODk1NDMgMjAuMTA0NiAzIDE5IDNaIiBzdHJva2U9IiNGMkYzRjQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0zIDlIMjEiIHN0cm9rZT0iI0YyRjNGNCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTkgMjFWOSIgc3Ryb2tlPSIjRjJGM0Y0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K&logoColor=ffffff&color=282828" />
+  </a>
+</p>
+
+
+
 
 ## Description
 
